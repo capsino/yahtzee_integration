@@ -12,9 +12,7 @@ before_install:
     - docker-compose --version
 
 script:
-    - docker pull shaunhanson/yahtzee_server
-    - docker pull shaunhanson/yahtzee_client
-    - ./build.sh
+    - ./pull.sh
     - ./up.sh
     - sleep 5
     - ./run.sh

@@ -10,3 +10,7 @@ before_install:
 script:
     - docker pull shaunhanson/yahtzee_server
     - docker pull shaunhanson/yahtzee_client
+    - ./build.sh
+    - ./up.sh
+    - sleep 5
+    - ./run.sh

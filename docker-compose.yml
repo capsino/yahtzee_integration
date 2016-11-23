@@ -1,0 +1,17 @@
+version: '1'
+
+services:
+  yahtzee_client:
+    image: shaunhanson/yahtzee_client
+    container_name: yahtzee_client
+    ports: [ "80:80" ]
+    build:
+      context: ./client
+
+  yahtzee_server:
+    image: yahtzee_server
+    container_name: yahtzee_server
+    ports: [ "4567:4567" ]
+    build:
+      context: ./server
+
